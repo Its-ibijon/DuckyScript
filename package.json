@@ -1,0 +1,36 @@
+{
+    "name": "duckyscript",
+    "displayName": "DuckyScript for Codium",
+    "description": "A basic DuckyScript syntax highlighter for codium ",
+    "version": "0.",
+    "publisher": "ibijon4",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "duckyscript",
+                "aliases": [
+                    "Duckyscript",
+                    "duckyscript"
+                ],
+                "extensions": [
+                    ".dd"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "duckyscript",
+                "scopeName": "payload.dd",
+                "path": "./syntaxes/duckyscript.tmLanguage.json"
+            }
+        ]
+    },
+    "license": "MIT"
+}

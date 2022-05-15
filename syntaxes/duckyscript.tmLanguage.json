@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Duckyscript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#semicolon"
+		},
+
+		{
+			"include":"#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.duckyscript",
+				"match": "\\b(DEFAULT_DELAY|DEFAULTDELAY|DELAY|STRING|GUI|MENU|APP|SHIFT|ENTER|ALT|CONTROL|CTRL|DOWNARROW|DOWN|LEFTARROW|LEFT|RIGHTARROW|RIGHT|UPARROW|UP|BREAK|PAUSE|CAPSLOCK|DELETE|END|ESC|ESCAPE|HOME|INSERT|NUMLOCK|PAGEUP|PAGEDOWN|PRINTSCREEN|SCROLLOCK|SPACE|TAB|default_delay|defaultdelay|delay|string|gui|menu|app|shift|enter|alt|control|ctrl|downarrow|down|leftarrow|left|rightarrow|right|uparrow|up|break|pause|capslock|delete|end|esc|escape|home|insert|numlock|pageup|pagedown|printscreen|scrollock|space|tab)\\b"
+			}]
+		},
+		"comments": {
+            "name": "comment.duckyscript",
+            "begin": "REM ",
+			"end":"\n"
+            
+        },
+		"semicolon": {
+			"patterns": [
+				{
+					"name": "invalid.deprecated.semicolon.duckyscript",
+					"match": "\\;$"
+				}
+			]
+		},
+		
+		"numbers": {
+			"name": "constant.numeric.duckyscript",
+			"match" : "[0-9]*(\\.[0-9]*)?"
+		}
+		
+		
+	},
+	
+	"scopeName": "payload.dd"
+}
